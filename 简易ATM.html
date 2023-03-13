@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var balance = 100;
+        while (true) {
+            var act = prompt('请输入您要进行操作:\n' + '1.存钱\n' + '2.取钱\n' + '3.显示余额\n' + '4.退出\n');
+            switch (act) {
+                case '1':
+                var save = prompt('请输入存钱数额:');
+                balance += parseInt(save);
+                alert('您现在的存款为:' + balance);
+                break;
+                case '2':
+                var get = prompt('请输入取钱数额:');
+                balance -= parseInt(get);
+                alert('您现在的存款为:' + balance);
+                break;
+                case '3':
+                alert('您现在的存款为:' + balance);
+                break;
+                case '4':
+                alert('正在退出...');
+                break;
+                default:
+                alert('操作有误!');
+            }
+            if (act == 4) {
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

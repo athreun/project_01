@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'hello html,hello css,hello javascript';
+        function getMaxCount(str) {
+            var o = {};
+            for (var i = 0; i < str.length; i++) {
+                var chars = str.charAt(i);
+                if (o[chars]) {
+                    o[chars]++;
+                } else {
+                    o[chars] = 1;
+                }
+            }
+            console.log(o);
+            var maxchar = '';
+            var maxcharcount = 0;
+            for (k in o) {
+                if(o[k] > maxcharcount) {
+                    maxcharcount = o[k];
+                    maxchar = k;
+                }
+            }
+            return '出现最多的字符是:' + maxchar + ',一共出现了' + maxcharcount + '次'
+        }
+        console.log(getMaxCount(str));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

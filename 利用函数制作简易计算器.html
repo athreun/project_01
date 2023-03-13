@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(num1,num2) {
+            return num1 + num2;
+        }
+        function sub(num1,num2) {
+            return num1 - num2;
+        }
+        function mul(num1,num2) {
+            return num1 * num2;
+        }
+        function div(num1,num2) {
+            return num1 / num2;
+        }
+        var option = prompt('欢迎使用简易计算器:\n1. 加法运算;\n2. 减法运算;\n3. 乘法运算;\n4. 除法运算;\n5. 退出:\n请输入您的选项');
+        switch(option) {
+            case '1':
+            var num1 = parseInt(prompt('请输入一个数字：'))
+            var num2 = parseInt(prompt('请输入一个数字：'))
+            alert(add(num1,num2))
+            break;
+            case '2':
+            var num1 = parseInt(prompt('请输入一个数字：'))
+            var num2 = parseInt(prompt('请输入一个数字：'))
+            alert(sub(num1,num2))
+            break;
+            case '3':
+            var num1 = parseInt(prompt('请输入一个数字：'))
+            var num2 = parseInt(prompt('请输入一个数字：'))
+            alert(mul(num1,num2))
+            break;
+            case '4':
+            var num1 = parseInt(prompt('请输入一个数字：'))
+            var num2 = parseInt(prompt('请输入一个数字：'))
+            alert(div(num1,num2))
+            break;
+            case '5':
+            alert('退出')
+            break;
+            default:
+            alert('选项有误');
+            break;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+        table {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table,th,td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+        th {
+            padding: 5px 30px;
+        }
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>学生列表</h3>
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家乡</th>
+        </tr>
+        <script>
+            let message = [
+                {name:'小明',age:18,sex:'male',from:'China'},
+                {name:'Sana',age:27,sex:'female',from:'Japan'},
+                {name:'Curry',age:34,sex:'male',from:'America'},
+                {name:'Faker',age:27,sex:'male',from:'SouthKorea'}
+            ]
+            for (let i = 0; i < message.length; i++) {
+                document.write(`
+                <tr>
+                    <td>${i+1}</td>
+                    <td>${message[i].name}</td>
+                    <td>${message[i].age}</td>
+                    <td>${message[i].sex}</td>
+                    <td>${message[i].from}</td>
+                </tr>
+            `)
+            }
+        </script>
+    </table>
+    
+</body>
+
+</html>

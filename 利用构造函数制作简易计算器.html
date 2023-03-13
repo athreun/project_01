@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Calculator(num1,num2) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.add = function(num1,num2) {
+                return num1 + num2;
+            }
+            this.sub = function(num1,num2) {
+                return num1 - num2;
+            }
+            this.mul = function(num1,num2) {
+                return num1 * num2;
+            }
+            this.div = function(num1,num2) {
+                return num1 / num2;
+            }
+        }
+        var option = prompt('欢迎使用简易计算器:\n1. 加法运算;\n2. 减法运算;\n3. 乘法运算;\n4. 除法运算;\n5. 退出:\n请输入您的选项');
+        switch(option) {
+            case '1':
+                var num1 = parseInt(prompt('请输入一个数：'))
+                var num2 = parseInt(prompt('请输入一个数：'))
+                result = new Calculator().add(num1,num2)
+                alert(result)
+                break;
+            case '2':
+                var num1 = parseInt(prompt('请输入一个数：'))
+                var num2 = parseInt(prompt('请输入一个数：'))
+                result = new Calculator().sub(num1,num2)
+                alert(result)
+                break;
+            case '3':
+                var num1 = parseInt(prompt('请输入一个数：'))
+                var num2 = parseInt(prompt('请输入一个数：'))
+                result = new Calculator().mul(num1,num2)
+                alert(result)
+                break;
+            case '4':
+                var num1 = parseInt(prompt('请输入一个数：'))
+                var num2 = parseInt(prompt('请输入一个数：'))
+                result = new Calculator().div(num1,num2)
+                alert(result)
+                break;
+            case '5':
+                alert('退出')
+                break;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

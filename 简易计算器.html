@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculator (num1,symbol,num2) {
+            switch (symbol) {
+                case '+':
+                return parseInt(num1) + parseInt(num2);
+                break;
+                case '-':
+                return parseInt(num1) - parseInt(num2);
+                break;
+                case '*':
+                return parseInt(num1) * parseInt(num2);
+                break;
+                case '/':
+                return parseInt(num1) / parseInt(num2);
+                break;
+                default:
+                return ('运算符错误');
+                break;
+            }
+        }
+        var num1 = prompt('请输入第一个数:');
+        var symbol = prompt('请输入运算符:');
+        var num2 = prompt('请输入第二个数:');
+        alert('运算结果为:' + calculator(num1,symbol,num2));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
